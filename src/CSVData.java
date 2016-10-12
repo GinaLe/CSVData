@@ -27,8 +27,45 @@ public class CSVData {
 		public static CSVData readCSVFile(String filename, int numLinesToIgnore) {
 			return null;
 		}
-
-	
-
+		
+		public double[] getRow(int rowIndex) {
+			return null;
+		}
+		
+		public double[] getColumn(int colIndex) {
+			return null;
+		}
+		
+		public static double[][] getRows(int[] rowIndexes) {
+			return null;
+		}
+		
+		public double[][] getColumns(int[] colIndexes) {
+			return null;
+		}
+		
+		public double[][] getColumns(String[] colNames) {
+			return null;
+		}
+		
+		public void setValue(int rowIndex, int colIndex, double maxValue) {
+			
+		}
+		
+		public void setRow(int row) {
+			
+		}
+		
+		public void setColumn(int col) {
+			
+		}
+		
+		public String[] getColumnTitles() {
+			return null;
+		}
+		
+		public void saveToFile(String filename) {
+			
+		}
 
 }
