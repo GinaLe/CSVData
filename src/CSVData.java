@@ -27,10 +27,20 @@ public class CSVData {
 		public static CSVData readCSVFile(String filename, int numLinesToIgnore) {
 			return null;
 		}
-		
+		/***
+		 * returns a row specified by the input
+		 * @param rowIndex what row to get
+		 * @return a row specified by the input
+		 */
 		public double[] getRow(int rowIndex) {
 			return null;
 		}
+		
+		/***
+		 * returns a column specified by the input
+		 * @param colIndex what column to get
+		 * @return a column specified by the input
+		 */
 		
 		public double[] getColumn(int colIndex) {
 			return null;
