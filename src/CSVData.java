@@ -42,7 +42,7 @@ public class CSVData {
 		}
 	}
 
-	private String readFileAsString(String filepath) {
+	public static String readFileAsString(String filepath) {
 		StringBuilder output = new StringBuilder();
 		try (Scanner scanner = new Scanner(new File(filepath))) {
 			while (scanner.hasNext()) {
@@ -159,7 +159,7 @@ public class CSVData {
 	 */
 
 	public void setValue(int rowIndex, int colIndex, double maxValue) {
-
+		data[rowIndex][colIndex] = maxValue;
 	}
 
 	/***
@@ -168,8 +168,10 @@ public class CSVData {
 	 * @param row
 	 *            row that new values will be set in
 	 */
-	public void setRow(int row) {
-
+	public static void setRow(int rowIndex, double[] vals) {
+		for(int i = 0; i < vals.length; i++) {
+			data[rowIndex][i] = vals[i];
+		}
 	}
 
 	/***
@@ -178,8 +180,10 @@ public class CSVData {
 	 * @param col
 	 *            column that new values will be set in
 	 */
-	public void setColumn(int col) {
-
+	public static void setColumn(int colIndex, double[] vals) {
+		for(int i = 0; i < vals.length; i++) {
+			data[i][colIndex] = vals[i];
+		}
 	}
 
 	/***
@@ -188,7 +192,7 @@ public class CSVData {
 	 * @return column titles
 	 */
 	public String[] getColumnTitles() {
-		return null;
+		return this.columnNames;
 	}
 
 	/***
